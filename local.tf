@@ -22,7 +22,7 @@ locals {
     {
       userarn  = "arn:aws:iam::920048411410:user/jignesh@rapidinnovation.dev"
       username = "jignesh@rapidinnovation.dev"
-      groups   = ["system:masters",  "system:nodes"]
+      groups   = ["system:masters", "system:nodes"]
     },
   ]
 
