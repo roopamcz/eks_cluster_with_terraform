@@ -3,7 +3,7 @@
 ##################################################################################
 ###### NETWORKING #
 module "vpc" {
-  source = "git@github.com:Rapid-Innovation/infra-terraform-rapidinnovation.git//vpc?ref=modules"
+  source = "./vpc"
 
   name = "${local.env_name}-${local.project}-vpc"
   cidr = "10.0.0.0/16"

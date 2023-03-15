@@ -21,7 +21,7 @@ resource "helm_release" "node_termination" {
 
 resource "helm_release" "metric-server" {
   name       = "metrics"
-  repository = "git@github.com:Rapid-Innovation/infra-terraform-rapidinnovation.git//metrics_server?ref=helm"
+  repository = "./charts"
   chart      = "metrics_server"
   namespace  = "kube-system"
 

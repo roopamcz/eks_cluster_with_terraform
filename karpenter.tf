@@ -61,9 +61,9 @@ resource "helm_release" "karpenter" {
   create_namespace = true
 
   name       = "karpenter"
-  repository = "https://charts.karpenter.sh"
+  repository = "oci://public.ecr.aws/karpenter/karpenter"
   chart      = "karpenter"
-  version    = "v0.8.1"
+  version    = "v0.27.0"
 
   set {
     name  = "serviceAccount.annotations.eks\\.amazonaws\\.com/role-arn"
@@ -89,7 +89,7 @@ resource "helm_release" "karpenter" {
 
 resource "kubectl_manifest" "karpenter_provisioner" {
   yaml_body = <<-YAML
-  apiVersion: karpenter.sh/v1alpha5
+  apiVersion: karpenter.sh/v1alpha3
   kind: Provisioner
   metadata:
     name: default

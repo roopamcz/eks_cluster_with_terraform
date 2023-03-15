@@ -10,9 +10,9 @@ data "aws_eks_cluster_auth" "cluster" {
 
 
 module "eks" {
-  source          = "git@github.com:Rapid-Innovation/infra-terraform-rapidinnovation.git//eks?ref=modules"
+  source          = "./eks"
   cluster_name    = local.eks_cluster_name
-  cluster_version = "1.22"
+  cluster_version = "1.25"
   subnets         = module.vpc.private_subnets
   enable_irsa     = true
   # subnets         = concat(module.vpc.private_subnets,module.vpc.public_subnets)

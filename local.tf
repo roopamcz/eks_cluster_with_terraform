@@ -20,8 +20,8 @@ locals {
 
   map_users = [
     {
-      userarn  = "arn:aws:iam::920048411410:user/jignesh@rapidinnovation.dev"
-      username = "jignesh@rapidinnovation.dev"
+      userarn  = "arn:aws:iam::476498784073:user/demo"
+      username = "Roopam@rapidinnovation.dev"
       groups   = ["system:masters", "system:nodes"]
     },
   ]
@@ -34,14 +34,14 @@ locals {
   capacity_type = "spot"
 
   ###### ACM Certificate ARN #####
-  rapidinnovation_acm = "arn:aws:acm:us-east-1:920048411410:certificate/61bc08d6-bc6c-48bd-82a2-605195fde6a5"
+  rapidinnovation_acm = "arn:aws:acm:us-east-1:476498784073:certificate/56233a4f-0b97-4405-96f1-36848c5b45ad"
 
 
   common_tags = {
     project             = local.project
     Environment         = local.env_name
     cost_center         = "484058"
-    project_owner       = "JigneshKumar_Patel"
-    project_owner_email = "jignesh@rapidinnovation.dev"
+    project_owner       = "Roopam_Chakrawarty"
+    project_owner_email = "Roopam@rapidinnovation.dev"
   }
 }

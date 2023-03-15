@@ -1,6 +1,6 @@
 resource "helm_release" "nginx" {
   name       = "nginx"
-  repository = "git@github.com:Rapid-Innovation/infra-terraform-rapidinnovation.git//nginxssl?ref=helm"
+  repository = "./charts"
   chart      = "nginxssl"
 
   set {
